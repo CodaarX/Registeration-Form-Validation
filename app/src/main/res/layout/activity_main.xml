@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<LinearLayout
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background = "#2CAFF4"
+    style="@style/main_linear_layout">
+
+    <ImageView
+        android:layout_width="210dp"
+        android:layout_height="121dp"
+        android:src="@drawable/index" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        android:textColor="@color/white"
+        style="@style/register_text_style"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/registrationCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        android:layout_gravity="center"
+        app:cardElevation="10dp"
+        android:backgroundTint="#0AADF6">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:weightSum="3">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInput_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/text_input_style">
+
+            <EditText
+                android:id="@+id/edit_NameInput"
+                style="@style/input_styles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name"
+                android:inputType="text"
+                android:singleLine="true"
+                android:textColorHint="@color/myBlue" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInput_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/text_input_style">
+
+            <EditText
+                android:id="@+id/edit_phoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/phone_number"
+                android:textColorHint="@color/myBlue"
+                android:inputType="phone"
+                style="@style/input_styles"
+                android:singleLine="true"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInput_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/text_input_style">
+
+            <EditText
+                android:id="@+id/mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                android:textColorHint="@color/myBlue"
+                android:inputType="textEmailAddress"
+                style="@style/input_styles"
+                android:singleLine="true"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/selectGender"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/genderSpinner"
+            style="@style/text_input_style"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/registerButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:backgroundTint="#FAC0E2EF"
+                android:layout_marginBottom="15dp"
+                android:text="@string/register_button"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+</layout>
